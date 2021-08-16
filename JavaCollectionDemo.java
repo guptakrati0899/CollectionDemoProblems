@@ -3,11 +3,13 @@ package demolearningproblem;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 public class JavaCollectionDemo {
 	public static void main(String[] args) {
 		
 		doListDemo();
+		doStackDemo();
 	
 		
 	}
@@ -31,6 +33,20 @@ public class JavaCollectionDemo {
 		
 	}
 	
-	
+	private static void doStackDemo() {
+		System.out.println("\nIn doStackDemo");
+		Stack<String> stack = new Stack<>();
+		stack.push("Krati");
+		stack.push("Shreya");
+		stack.push("Akshat");
+		stack.push("Virat");
+		stack.push("Prags");
+		String pop = stack.pop();
+		Iterator<String> itr = stack.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+		
+	}
 	
 }	
