@@ -6,7 +6,31 @@ import java.util.List;
 
 public class JavaCollectionDemo {
 	public static void main(String[] args) {
-		System.out.println("Welcome to master branch of Collections demo branch");
+		
+		doListDemo();
+	
 		
 	}
-}
+
+
+	private static void doListDemo() {
+		System.out.println("In doListDemo");
+		
+		List<String> list = new LinkedList<>();
+		
+		list.add("Krati");
+		list.add("Shreya");
+		list.add("Akshat");
+		list.add("Virat");
+		
+		Iterator itr = list.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+			
+		}
+		
+	}
+	
+	
+	
+}	
