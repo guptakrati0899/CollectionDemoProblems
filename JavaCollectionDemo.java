@@ -3,6 +3,7 @@ package demolearningproblem;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Stack;
 
 public class JavaCollectionDemo {
@@ -10,6 +11,7 @@ public class JavaCollectionDemo {
 		
 		doListDemo();
 		doStackDemo();
+		doQueueDemo();
 	
 		
 	}
@@ -49,4 +51,28 @@ public class JavaCollectionDemo {
 		
 	}
 	
+	private static void doQueueDemo() {
+		System.out.println("\nIn doQueueDemo");
+		PriorityQueue<String> queue = new PriorityQueue<>();
+		queue.add("Krati Gupta");
+		queue.add("Shreya Soni");
+		queue.add("Akshat Mitra");
+		queue.add("Virat Singh");
+		System.out.println("head:" + queue.element());
+		System.out.println("head:" + queue.peek());
+		System.out.println("Iterating the queue elements");
+		Iterator itr = queue.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+		queue.remove();
+		queue.poll();
+		System.out.println("After Removing Two Elments");
+		Iterator itr1 = queue.iterator();
+		while(itr1.hasNext()) {
+			System.out.println(itr1.next());
+		}
+		
+				
+	}
 }	
